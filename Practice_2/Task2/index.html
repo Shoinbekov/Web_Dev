@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Левая часть с изображениями -->
+        <div class="left-section">
+            <div class="instagram-logo">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <defs>
+                        <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FED576;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#F47133;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#BC3081;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#4C63D2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="64" height="64" rx="16" fill="url(#instagram-gradient)"/>
+                    <rect x="12" y="12" width="40" height="40" rx="8" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="32" cy="32" r="10" stroke="white" stroke-width="3" fill="none"/>
+                    <circle cx="46" cy="18" r="3" fill="white"/>
+                </svg>
+            </div>
+
+            <h1 class="main-title">
+                Посмотрите, какими моментами<br>
+                из жизни поделились ваши<br>
+                <span class="highlight">близкие друзья</span>.
+            </h1>
+
+            <div class="photos-container">
+                <!-- Фото 1 - зелёное -->
+                <div class="photo photo-1">
+                    <img src="photo1.jpg" alt="Photo 1">
+                    <div class="reaction heart">❤️</div>
+                    <div class="story-bar"></div>
+                </div>
+                
+                <!-- Фото 2 - оранжевое/жёлтое (центральное) -->
+                <div class="photo photo-2">
+                    <img src="photo2.jpg" alt="Photo 2">
+                    <div class="reaction emoji">
+                        <span class="emoji-icon">🎳</span>
+                        <span class="emoji-icon">👀</span>
+                        <span class="emoji-icon">🤗</span>
+                    </div>
+                    <div class="story-bar"></div>
+                    <div class="bottom-bar">
+                        <div class="reply-icon"></div>
+                        <div class="heart-icon">♡</div>
+                    </div>
+                </div>
+                
+                <!-- Фото 3 - красное -->
+                <div class="photo photo-3">
+                    <img src="photo3.jpg" alt="Photo 3">
+                    <div class="reaction check">
+                        <span class="star">★</span>
+                        <span class="checkmark">✓</span>
+                    </div>
+                    <div class="story-bar"></div>
+                    <div class="bottom-elements">
+                        <div class="reply-icon"></div>
+                        <div class="heart-icon">♡</div>
+                    </div>
+                    <div class="profile-circle">
+                        <img src="profile.jpg" alt="Profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Правая часть с формой -->
+        <div class="right-section">
+            <div class="login-box">
+                <h2 class="login-title">Войти в Instagram</h2>
+                
+                <form class="login-form">
+                    <input 
+                        type="text" 
+                        class="input-field" 
+                        placeholder="Имя пользователя, номер мобильного телефона или электронны..."
+                    >
+                    
+                    <input 
+                        type="password" 
+                        class="input-field" 
+                        placeholder="Пароль"
+                    >
+                    
+                    <button type="submit" class="login-button">Войти</button>
+                    
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </form>
+
+                <div class="divider">
+                    <span class="divider-text">ИЛИ</span>
+                </div>
+
+                <button class="facebook-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Войти через Facebook
+                </button>
+
+                <button class="create-account-button">Создать новый аккаунт</button>
+            
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Meta</a>
+                <a href="#">Информация</a>
+                <a href="#">Блог</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Помощь</a>
+                <a href="#">API</a>
+                <a href="#">Конфиденциальность</a>
+                <a href="#">Условия</a>
+                <a href="#">Места</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">Meta AI</a>
+                <a href="#">Threads</a>
+                <a href="#">Загрузка контактов и лиц, не являющихся пользователями</a>
+                <a href="#">Meta Verified</a>
+            </div>
+            <div class="footer-bottom">
+                <select class="language-selector">
+                    <option>Русский</option>
+                    <option>English</option>
+                    <option>Қазақша</option>
+                </select>
+                <span class="copyright">© 2025 Instagram from Meta</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: white;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-input {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    padding: 5px 12px;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+.btn-link {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    color: white;
+}
+
+.btn-primary {
+    background: white;
+    color: #0d1117;
+    padding: 5px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #8b949e;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 60px 32px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.pricing-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.pricing-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: #58a6ff;
+}
+
+.pricing-card.popular {
+    border-color: #58a6ff;
+    border-width: 2px;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #58a6ff;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.plan-name {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.price {
+    margin-bottom: 16px;
+}
+
+.price-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.price-period {
+    font-size: 16px;
+    color: #8b949e;
+    margin-left: 8px;
+}
+
+.plan-description {
+    color: #8b949e;
+    margin-bottom: 24px;
+    min-height: 48px;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 12px 24px;
+    background: #238636;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 32px;
+}
+
+.btn-card:hover {
+    background: #2ea043;
+}
+
+.popular .btn-card {
+    background: #1f6feb;
+}
+
+.popular .btn-card:hover {
+    background: #58a6ff;
+}
+
+.features-title {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #c9d1d9;
+    font-size: 14px;
+}
+
+.check-icon {
+    fill: #3fb950;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Comparison Section */
+.comparison-section {
+    padding: 80px 32px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #161b22;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table thead {
+    background: #0d1117;
+}
+
+.comparison-table th {
+    padding: 16px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+}
+
+.comparison-table td {
+    padding: 16px;
+    border-bottom: 1px solid #30363d;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(56, 139, 253, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 60px 32px 32px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-column a {
+    display: block;
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .nav {
+        display: none;
+    }
+    
+    .pricing-section .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Additional Add-ons Section */
+.addons-section {
+    padding: 80px 32px;
+    background: #f6f8fa;
+}
+
+.addons-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #24292f;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.addon-card {
+    background: white;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.addon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #0969da;
+}
+
+.addon-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: white;
+    border: 1px solid #1a7f37;
+    color: #1a7f37;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.addon-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.addon-icon.purple {
+    background: #dfd8fd;
+    color: #8250df;
+}
+
+.addon-icon.green {
+    background: #d4f6e6;
+    color: #1a7f37;
+}
+
+.addon-icon.blue {
+    background: #ddf4ff;
+    color: #0969da;
+}
+
+.addon-icon.pink {
+    background: #ffeff7;
+    color: #bf3989;
+}
+
+.addon-icon.orange {
+    background: #fff5db;
+    color: #d97706;
+}
+
+.addon-icon.yellow {
+    background: #fef3c7;
+    color: #ca8a04;
+}
+
+.addon-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #24292f;
+    margin-bottom: 12px;
+}
+
+.addon-description {
+    color: #57606a;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 66px;
+}
+
+.addon-link {
+    color: #0969da;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.addon-link:hover {
+    text-decoration: underline;
+}
+
+/* Compare Features Button */
+.compare-features {
+    text-align: center;
+}
+
+.compare-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #0969da;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.compare-link:hover {
+    color: #0550ae;
+}
+
+.compare-link svg {
+    transition: transform 0.3s;
+}
+
+.compare-link:hover svg {
+    transform: translateY(4px);
+}
+
+/* Responsive для add-ons */
+@media (max-width: 1024px) {
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .addons-title {
+        font-size: 36px;
+    }
+    
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .addon-description {
+        min-height: auto;
+    }
+}

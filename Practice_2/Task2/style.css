@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #0f1419 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Левая секция */
+.left-section {
+    max-width: 600px;
+}
+
+.instagram-logo {
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
+}
+
+.highlight {
+    color: #F56040;
+}
+
+.photos-container {
+    position: relative;
+    width: 520px;
+    height: 420px;
+}
+
+.photo {
+    position: absolute;
+    width: 260px;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo:hover {
+    transform: translateY(-5px);
+}
+
+.photo-1 {
+    left: 0;
+    top: 20px;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.photo-2 {
+    left: 130px;
+    top: 0;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.photo-3 {
+    left: 260px;
+    top: 20px;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+/* Story bar наверху */
+.story-bar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.story-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Реакции */
+.reaction {
+    position: absolute;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.photo-1 .reaction {
+    bottom: 80px;
+    left: 20px;
+}
+
+.photo-2 .reaction {
+    top: 60px;
+    left: 20px;
+}
+
+.photo-2 .emoji-icon {
+    font-size: 22px;
+}
+
+.photo-3 .reaction {
+    top: 120px;
+    right: -30px;
+    background: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.photo-3 .star {
+    font-size: 20px;
+    margin-right: -5px;
+}
+
+.photo-3 .checkmark {
+    font-size: 18px;
+}
+
+/* Нижние элементы на фото */
+.bottom-bar,
+.bottom-elements {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reply-icon {
+    width: 120px;
+    height: 36px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.heart-icon {
+    font-size: 28px;
+    color: white;
+}
+
+/* Профиль на третьем фото */
+.profile-circle {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #F5A623;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Правая секция */
+.right-section {
+    background: rgba(22, 32, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 50px 40px;
+    width: 420px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.login-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #E4E6EB;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: #0095F6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.login-button:hover {
+    background: #1877F2;
+}
+
+.forgot-password {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 12px;
+    display: block;
+}
+
+.forgot-password:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.divider-text {
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.facebook-button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: #1877F2;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+}
+
+.facebook-button:hover {
+    opacity: 0.8;
+}
+
+.create-account-button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #0095F6;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 30px;
+}
+
+.create-account-button:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.meta-logo {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background: rgba(15, 20, 25, 0.5);
+    padding: 30px 20px 20px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-selector {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Стили для опций в выпадающем списке */
+.language-selector option {
+    background: #1a2332;
+    color: white;
+    padding: 8px;
+}
+
+/* При наведении на опцию */
+.language-selector option:hover {
+    background: #2a3342;
+}
+
+/* Когда селект открыт */
+.language-selector:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .photos-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+    
+    .right-section {
+        width: 100%;
+        max-width: 420px;
+    }
+    
+    .photos-container {
+        display: none;
+    }
+}

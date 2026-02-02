@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="intro">
+            <h1 class="name">facebook</h1>
+            <p class="text" id="intro-text">
+                Facebook помогает вам всегда<br>
+                оставаться на связи и общаться со<br> 
+                своими знакомыми.
+            </p>
+        </div>
+
+        <div class="login-card">
+            <form class="form">
+                <input class="input-wrapper" type="email" id="email-input" placeholder="Электронный адрес или номер телефона">
+                
+                <input class="input-wrapper" type="password" id="password-input" placeholder="Пароль">
+
+                <button class="button1" id="login-btn">Вход</button>
+
+                <a href="#" class="forgot-password" id="forgot-link">Забыли пароль?</a>
+            </form>
+
+            <hr>
+            
+            <button class="button2" id="register-btn">Создать новый аккаунт</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="languages">
+                <a href="#" onclick="changeLanguage('ru')">Русский</a>
+                <a href="#" onclick="changeLanguage('kk')">Қазақша</a>
+                <a href="#" onclick="changeLanguage('en')">English (US)</a>
+                <a href="#" onclick="changeLanguage('tr')">Türkçe</a>
+                <a href="#" onclick="changeLanguage('es')">Español</a>
+                <a href="#" onclick="changeLanguage('pt')">Português (Brasil)</a>
+                <a href="#" onclick="changeLanguage('de')">Deutsch</a>
+                <a href="#" onclick="changeLanguage('ko')">한국어</a>
+                <a href="#" onclick="changeLanguage('ja')">日本語</a>
+                <a href="#" onclick="changeLanguage('zh')">中文(简体)</a>
+                <button class="plus-btn">+</button>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-links">
+                <a href="#" id="link-register">Регистрация</a>
+                <a href="#" id="link-login">Вход</a>
+                <a href="#" id="link-messenger">Messenger</a>
+                <a href="#" id="link-fb-lite">Facebook Lite</a>
+                <a href="#" id="link-video">Видео</a>
+                <a href="#" id="link-places">Места</a>
+                <a href="#" id="link-games">Игры</a>
+                <a href="#" id="link-marketplace">Marketplace</a>
+                <a href="#" id="link-meta-pay">Meta Pay</a>
+                <a href="#" id="link-meta-store">Meta Store</a>
+                <a href="#" id="link-meta-quest">Meta Quest</a>
+                <a href="#" id="link-ray-ban">Ray-Ban Meta</a>
+                <a href="#" id="link-meta-ai">Meta AI</a>
+                <a href="#" id="link-instagram">Instagram</a>
+                <a href="#" id="link-threads">Threads</a>
+            </div>
+            
+            <div class="footer-copyright">
+                <span>Meta © 2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
