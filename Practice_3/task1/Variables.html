@@ -1,0 +1,59 @@
+Как создать переменную?
+
+let message;           // Создали переменную
+message = 'Hello';     // Положили в неё данные
+alert(message);        // Показали: Hello
+
+Короткий способ:
+let message = 'Hello';  // Создали и сразу заполнили
+alert(message);         // Hello
+
+Изменение значения
+
+let message;
+
+message = 'Hello!';    // Положили 'Hello!'
+message = 'World!';    // Заменили на 'World!'
+
+alert(message);        // World!
+
+Копирование переменных
+
+let hello = 'Hello world!';
+let message;
+
+message = hello;  // Скопировали значение
+
+alert(hello);    // Hello world!
+alert(message);  // Hello world!
+
+ОШИБКА: Повторное объявление
+
+let message = "This";
+let message = "That";  // ❌ ОШИБКА! Уже объявлена!
+
+Правильно:
+
+let message = "This";
+message = "That";      // ✅ Просто изменили
+
+Константы (const)
+Константа = переменная, которую НЕЛЬЗЯ изменить
+
+const myBirthday = '18.04.1982';
+myBirthday = '01.01.2001';  // ❌ ОШИБКА!
+
+Когда использовать const?
+Когда значение НЕ изменится
+
+const PI = 3.14;
+const COLOR_RED = "#F00";
+const MAX_SIZE = 100;
+
+var vs let
+
+var message = 'Hello';  // Старый способ
+let message = 'Hello';  // Новый способ
+
+Используй let, а не var!
+var - старый, есть проблемы (изучим позже)

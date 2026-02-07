@@ -1,0 +1,51 @@
+.login-card {
+    width: 400px;              /* Ширина квадрата */
+    height: 400px;             /* Высота квадрата */
+    background: white;         /* Цвет фона */
+    border-radius: 20px;       /* Скругленные углы */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);  /* Тень */
+    padding: 40px;             /* Отступы внутри */
+    margin: 100px auto;        /* Центрирование */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 100%;               /* На всю ширину */
+    padding: 12px;             /* Отступы внутри */
+    margin: 10px 0;            /* Отступы сверху/снизу */
+    border: 2px solid #ddd;    /* Рамка */
+    border-radius: 8px;        /* Скругление */
+    font-size: 16px;           /* Размер шрифта */
+}
+
+input:focus {
+    border-color: #667eea;     /* Цвет при фокусе */
+    outline: none;             /* Убрать обводку */
+}
+
+button {
+    width: 100%;               /* На всю ширину */
+    padding: 15px;             /* Отступы */
+    background: #667eea;       /* Цвет кнопки */
+    color: white;              /* Цвет текста */
+    border: none;              /* Без рамки */
+    border-radius: 8px;        /* Скругление */
+    font-size: 18px;           /* Размер шрифта */
+    font-weight: bold;         /* Жирный текст */
+    cursor: pointer;           /* Курсор-рука */
+    margin-top: 20px;          /* Отступ сверху */
+}
+
+button:hover {
+    background: #5568d3;       /* Цвет при наведении */
+}
+
+.form {
+    color: #333;               /* Цвет текста */
+    font-weight: 600;          /* Полужирный */
+}
