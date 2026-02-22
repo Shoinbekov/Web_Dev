@@ -1,9 +1,13 @@
 <div class="product-list-container">
-  <h1>Online Store</h1>
-  <div class="product-grid">
+  <div *ngIf="products.length === 0" class="empty-message">
+    <p>No products in this category</p>
+  </div>
+
+  <div *ngIf="products.length > 0" class="product-grid">
     <app-product-card 
       *ngFor="let product of products" 
-      [product]="product">
+      [product]="product"
+      (delete)="onDelete($event)">
     </app-product-card>
   </div>
 </div>

@@ -18,16 +18,28 @@
     
     <p class="price">{{ product.price | number }} ₸</p>
     
+    <div class="likes">
+      <button (click)="onLike()" class="btn-like">
+        ❤️ Like
+      </button>
+      <span class="likes-count">{{ product.likes }} likes</span>
+    </div>
+    
     <div class="actions">
       <a [href]="product.link" target="_blank" class="btn-buy">Buy on Kaspi</a>
+      
       <div class="share-buttons">
         <button (click)="shareOnWhatsApp()" class="btn-share whatsapp" title="Share on WhatsApp">
-          📱 WhatsApp
+          📱
         </button>
         <button (click)="shareOnTelegram()" class="btn-share telegram" title="Share on Telegram">
-          ✈️ Telegram
+          ✈️
         </button>
       </div>
+      
+      <button (click)="onDelete()" class="btn-delete" title="Delete product">
+        🗑️ Delete
+      </button>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product';
 
@@ -10,6 +10,15 @@ import { Product } from '../../models/product';
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Output() delete = new EventEmitter<number>();
+
+  onLike() {
+    this.product.likes++;
+  }
+
+  onDelete() {
+    this.delete.emit(this.product.id);
+  }
 
   shareOnWhatsApp() {
     const message = encodeURIComponent(`Check out this product: ${this.product.link}`);

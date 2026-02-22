@@ -4,6 +4,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -24,6 +26,9 @@
 
 .product-info {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
@@ -78,10 +83,39 @@ h3 {
   margin: 15px 0;
 }
 
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.btn-like {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.btn-like:hover {
+  background: #f50057;
+  transform: scale(1.05);
+}
+
+.likes-count {
+  color: #666;
+  font-weight: bold;
+}
+
 .actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: auto;
 }
 
 .btn-buy {
@@ -112,7 +146,7 @@ h3 {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   transition: opacity 0.3s;
 }
 
@@ -128,6 +162,21 @@ h3 {
 
 .btn-share:hover {
   opacity: 0.8;
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
 }
 
 @media (max-width: 768px) {
